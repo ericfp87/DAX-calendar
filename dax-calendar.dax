@@ -1,0 +1,25 @@
+'CALENDARIO'
+
+Calendario = 
+var dataminima = DATE(2023,1,1)
+var datamaxima = DATE(2027,12,31)
+return
+CALENDAR(dataminima,datamaxima)
+
+
+
+
+
+'COLUNAS'
+
+Ano = YEAR(Calendario[Date])
+
+Mês Atual = IF(
+    Calendario[Ano]=YEAR(TODAY())&&Calendario[Mes_num]=MONTH(TODAY()),
+    "Atual", "Não")
+
+Mes_nome = Calendario[Date].[Mês]
+
+Mes_num = Calendario[Date].[MonthNo]
+
+
